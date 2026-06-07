@@ -130,7 +130,7 @@ DOCUMENT TEXT (first 7000 chars):
 {text[:7000]}"""
 
     resp = client.chat.completions.create(
-        model="llama-3.1-70b-versatile",
+        model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}],
         max_tokens=2500,
         temperature=0.1
@@ -190,7 +190,7 @@ Respond with ONLY a JSON object — no preamble, no markdown:
 }}"""
 
     resp = groq_client.chat.completions.create(
-        model="llama-3.1-70b-versatile",
+        model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": verify_prompt}],
         max_tokens=600,
         temperature=0.1
